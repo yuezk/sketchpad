@@ -3,6 +3,8 @@ Sketchpad
 
 A small sketchpad for mobie browsers
 
+![Screenshot](http://s3.imgs.cc/img/ETzl5Yq.png)
+
 Usage
 =====
 
