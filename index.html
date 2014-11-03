@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SketchpadJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="sketchpad.js"></script>
+    <style>
+        #canvas { display: block; margin: 0 auto; width: 300px; height: 200px; }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <button id="clear">Clear</button>
+    <button id="show-image">Show Image</button>
+
+    <img id="image" src="" alt="" style="display: none;">
+    <script>
+        var options = {
+            penColor: '#f20',
+            penWidth: 3
+        }; 
+        var pad = new Sketchpad('canvas', options);
+
+        function clear() {
+            pad.clear();
+            document.getElementById('image').style.display = 'none';
+        }
+
+        function showImage() {
+            var dataURI = pad.getDataURI();
+            var image = document.getElementById('image');
+            image.src = dataURI;
+            image.style.display = 'block';
+        }
+
+        if(navigator.msPointerEnabled) { //ie mobile
+            document.getElementById('clear').addEventListener('MSPointerUp', clear, false);
+            document.getElementById('show-image').addEventListener('MSPointerUp', showImage, false);
+        }
+
+        document.getElementById('clear').addEventListener('touchend', clear, false);
+        document.getElementById('show-image').addEventListener('touchend', showImage, false);
+    </script>
+</body>
+</html>
