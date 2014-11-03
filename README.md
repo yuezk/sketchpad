@@ -42,7 +42,7 @@ clear()
 Support
 =======
 
-Test on:
+Tested on:
 
 - Safari(iOS 8.1)
 - Android 4.2.2
