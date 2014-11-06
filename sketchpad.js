@@ -65,7 +65,12 @@
      */
     Sketchpad.prototype.getRelativePosition = function (touch) {
         var offset = getOffset(this.canvas);
-        return {top: touch.pageY - offset.top, left: touch.pageX - offset.left};
+        var computed = win.getComputedStyle(this.canvas);
+
+        return {
+            top: touch.pageY - offset.top - this.canvas.clientTop - parseInt(computed.paddingTop),
+            left: touch.pageX - offset.left - this.canvas.clientLeft - parseInt(computed.paddingLeft)
+        };
     };
 
     /**
