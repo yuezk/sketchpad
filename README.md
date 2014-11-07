@@ -50,4 +50,4 @@ Tested on:
 - Android 4.2.2
 - IE Mobile 11(WP8.1) multi-touch not supported
 
-Should work on the modern mobile broswer.
+Should work on the modern mobile broswers.
