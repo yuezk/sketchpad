@@ -3,7 +3,7 @@ Sketchpad
 
 A small sketchpad for mobie browsers
 
-![Screenshot](http://s3.imgs.cc/img/ETzl5Yq.png)
+<img src="http://s3.imgs.cc/img/ETzl5Yq.png" width="320" alt="Screenshot">
 
 Usage
 =====
